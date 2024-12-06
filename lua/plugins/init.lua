@@ -1,7 +1,6 @@
 -- All plugins have lazy=true by default,to load a plugin on startup just lazy=false
 -- List of all default plugins & their definitions
 local default_plugins = {
-
   "nvim-lua/plenary.nvim",
 
   {
@@ -162,6 +161,7 @@ local default_plugins = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
+        "hrsh7th/cmp-cmdline",
       },
     },
     opts = function()
@@ -227,7 +227,19 @@ local default_plugins = {
       end
     end,
   },
-
+  -- {
+  --   "nvim-telescope/telescope-ui-select.nvim",
+  --   config = function()
+  --     require("telescope").setup {
+  --       extensions = {
+  --         ["ui-select"] = {
+  --           require("telescope.themes").get_dropdown {},
+  --         },
+  --       },
+  --     }
+  --     require("telescope").load_extension "ui-select"
+  --   end,
+  -- },
   -- Only load whichkey after all the gui
   {
     "folke/which-key.nvim",
