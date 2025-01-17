@@ -32,8 +32,6 @@ lspconfig.gopls.setup {
 
 lspconfig.ts_ls.setup {}
 
---lspconfig.tailwindcss.setup {}
-
 lspconfig.sqlls.setup {}
 
 -- `/` cmdline setup.
