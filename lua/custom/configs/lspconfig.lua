@@ -15,7 +15,6 @@ lspconfig.clangd.setup {
   cmd = {
     "clangd",
     "--clang-tidy",
-    "--check=exhaustive",
   },
   on_attach = function(client, bufnr)
     -- Ensure that we retain your existing on_attach logic
