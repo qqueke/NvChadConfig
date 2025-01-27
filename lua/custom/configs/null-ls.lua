@@ -18,7 +18,7 @@ local opts = {
     null_ls.builtins.formatting.gofmt,
     --null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.goimports,
-    null_ls.builtins.formatting.prettier,   -- verify if installed?
+    null_ls.builtins.formatting.prettier, -- verify if installed?
     null_ls.builtins.completion.spell,
     null_ls.builtins.hover.printenv,
     null_ls.builtins.hover.dictionary,

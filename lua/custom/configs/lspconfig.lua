@@ -12,6 +12,16 @@ lspconfig.clangd.setup {
   --    on_attach(client, bufnr)
   --  end,
   --  capabilities = capabilities,
+  cmd = {
+    "clangd",
+    "--clang-tidy",
+    "--check=exhaustive",
+  },
+  on_attach = function(client, bufnr)
+    -- Ensure that we retain your existing on_attach logic
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufnr) -- Call the base on_attach function
+  end,
 }
 
 lspconfig.lua_ls.setup {}
