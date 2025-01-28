@@ -6,9 +6,8 @@ local lspconfig = require "lspconfig"
 
 local cmp = require "cmp"
 
--- Function to configure LSP diagnostics globally
 vim.diagnostic.config {
-  -- virtual_text = false, -- Disable inline messages
+  virtual_text = false, -- Disable inline messages
   float = {
     border = "rounded",
     source = "always",
