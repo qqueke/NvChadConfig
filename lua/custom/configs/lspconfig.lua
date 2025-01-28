@@ -15,17 +15,18 @@ local cmp = require "cmp"
 --   },
 -- }
 
-vim.diagnostic.config {
-  virtual_text = {
-    spacing = 4,
-    wrap = true,                -- Attempt to wrap text (Neovim doesn't natively support full wrapping)
-    severity_limit = "Warning", -- Show only warnings and errors inline
-  },
-  float = {
-    border = "rounded",
-    source = "always",
-  },
-}
+-- vim.diagnostic.config {
+--   virtual_text = {
+--     spacing = 4,
+--     wrap = true,
+--     severity_limit = "Warning",
+--   },
+--   float = {
+--     border = "rounded",
+--     source = "always",
+--   },
+-- }
+vim.diagnostic.open_float()
 
 lspconfig.clangd.setup {
   --  on_attach = function(client, bufnr)
