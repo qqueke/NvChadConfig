@@ -6,6 +6,27 @@ local lspconfig = require "lspconfig"
 
 local cmp = require "cmp"
 
+-- Function to configure LSP diagnostics globally
+-- vim.diagnostic.config {
+--   -- virtual_text = false, -- Disable inline messages
+--   float = {
+--     border = "rounded",
+--     source = "always",
+--   },
+-- }
+
+vim.diagnostic.config {
+  virtual_text = {
+    spacing = 4,
+    wrap = true,                -- Attempt to wrap text (Neovim doesn't natively support full wrapping)
+    severity_limit = "Warning", -- Show only warnings and errors inline
+  },
+  float = {
+    border = "rounded",
+    source = "always",
+  },
+}
+
 lspconfig.clangd.setup {
   --  on_attach = function(client, bufnr)
   --    client.server_capabilities.signatureHelpProvider = false
@@ -30,6 +51,13 @@ lspconfig.clangd.setup {
     -- Ensure that we retain your existing on_attach logic
     client.server_capabilities.signatureHelpProvider = false
     on_attach(client, bufnr) -- Call the base on_attach function
+    vim.api.nvim_buf_set_keymap(
+      bufnr,
+      "n",
+      "<Leader>d",
+      "<cmd>lua vim.diagnostic.open_float()<CR>",
+      { noremap = true, silent = true }
+    )
   end,
 }
 
