@@ -7,26 +7,13 @@ local lspconfig = require "lspconfig"
 local cmp = require "cmp"
 
 -- Function to configure LSP diagnostics globally
--- vim.diagnostic.config {
---   -- virtual_text = false, -- Disable inline messages
---   float = {
---     border = "rounded",
---     source = "always",
---   },
--- }
-
--- vim.diagnostic.config {
---   virtual_text = {
---     spacing = 4,
---     wrap = true,
---     severity_limit = "Warning",
---   },
---   float = {
---     border = "rounded",
---     source = "always",
---   },
--- }
-vim.diagnostic.open_float()
+vim.diagnostic.config {
+  -- virtual_text = false, -- Disable inline messages
+  float = {
+    border = "rounded",
+    source = "always",
+  },
+}
 
 lspconfig.clangd.setup {
   --  on_attach = function(client, bufnr)
