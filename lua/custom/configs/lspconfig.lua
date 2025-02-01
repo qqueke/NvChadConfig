@@ -51,17 +51,17 @@ lspconfig.clangd.setup {
 lspconfig.lua_ls.setup {}
 
 lspconfig.gopls.setup {
-  settings = {
-    gopls = {
-      completeUnimported = true,
-      usePlaceholders = true,
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-      gofumpt = true,
-    },
-  },
+  -- settings = {
+  --   gopls = {
+  --     completeUnimported = true,
+  --     usePlaceholders = true,
+  --     analyses = {
+  --       unusedparams = true,
+  --     },
+  --     staticcheck = true,
+  --     gofumpt = true,
+  --   },
+  -- },
 }
 
 lspconfig.ts_ls.setup {}
