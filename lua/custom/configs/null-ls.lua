@@ -12,13 +12,23 @@ local opts = {
   -- },
 
   sources = {
-    null_ls.builtins.formatting.clang_format,
+    -- null_ls.builtins.formatting.clang_format.with({
+    --   extra_args = { "--style=Google" },  -- You can replace "Google" with other styles (e.g., "LLVM", "Mozilla")
+    -- }),
+    null_ls.builtins.formatting.clang_format.with({
+      extra_args = {
+        "--style=Google",        -- You can choose other styles like LLVM, Mozilla, etc.
+        "--column-limit=820",    -- Set a fixed column width limit (change to your preferred size)
+      },
+    }),
+
+    -- null_ls.builtins.formatting.clang_format,
     null_ls.builtins.diagnostics.cppcheck,
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.gofmt,
     --null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.goimports,
-    null_ls.builtins.formatting.prettier, -- verify if installed?
+    -- null_ls.builtins.formatting.prettier, 
     null_ls.builtins.completion.spell,
     null_ls.builtins.hover.printenv,
     null_ls.builtins.hover.dictionary,
