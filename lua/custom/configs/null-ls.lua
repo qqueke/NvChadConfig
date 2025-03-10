@@ -12,9 +12,6 @@ local opts = {
   -- },
 
   sources = {
-    -- null_ls.builtins.formatting.clang_format.with({
-    --   extra_args = { "--style=Google" },  -- You can replace "Google" with other styles (e.g., "LLVM", "Mozilla")
-    -- }),
     null_ls.builtins.formatting.clang_format.with {
       extra_args = {
         "--style=Google", -- You can choose other styles like LLVM, Mozilla, etc.
