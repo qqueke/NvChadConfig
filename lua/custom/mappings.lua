@@ -8,6 +8,8 @@ M.tmux = {
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
     ["n"] = { "nzz", "Center search result" },
     ["N"] = { "Nzz", "Center search result" },
+
+    ["<Enter>"] = { "o<ESC>zz", "Center search result" },
   },
 }
 
