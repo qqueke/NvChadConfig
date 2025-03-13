@@ -6,6 +6,8 @@ M.tmux = {
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+    ["n"] = { "nzz", "Center search result" },
+    ["N"] = { "Nzz", "Center search result" },
   },
 }
 
