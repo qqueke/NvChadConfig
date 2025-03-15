@@ -10,7 +10,7 @@ M.tmux = {
     ["N"] = { "Nzz", "Center search result" },
     -- ["j"] = { "jzz", "Move down and center" },
     -- ["k"] = { "kzz", "Move up and center" },
-    ["<Enter>"] = { "o<ESC>zz", "Center search result" },
+    ["<Enter>"] = { "o<ESC>", "Center search result" },
   },
 }
 
