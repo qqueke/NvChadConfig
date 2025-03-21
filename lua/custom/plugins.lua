@@ -179,6 +179,15 @@ plugins = {
     cmd = "CarbonNow",
     opts = {},
   },
+  {
+    "mbbill/undotree",
+    keys = {
+      { "<leader>u", vim.cmd.UndotreeToggle, desc = "Toggle UndoTree" },
+    },
+    config = function()
+      vim.g.undotree_SetFocusWhenToggle = 1 -- Automatically focus on the undotree window
+    end,
+  },
 }
 
 return plugins
