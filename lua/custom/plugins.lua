@@ -80,10 +80,10 @@ plugins = {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
   },
-  {
-    "tpope/vim-fugitive",
-    lazy = false,
-  },
+  -- {
+  --   "tpope/vim-fugitive",
+  --   lazy = false,
+  -- },
   {
     "lewis6991/gitsigns.nvim",
 
@@ -94,10 +94,10 @@ plugins = {
     vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {}),
     vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {}),
   },
-  {
-    "tpope/vim-dadbod",
-    lazy = false,
-  },
+  -- {
+  --   "tpope/vim-dadbod",
+  --   lazy = false,
+  -- },
   {
     "nvim-telescope/telescope-ui-select.nvim",
     dependencies = {
