@@ -2,15 +2,6 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require "null-ls"
 
 local opts = {
-  -- sources = {
-  --   null_ls.builtins.hover.dictionary,
-  --   null_ls.builtins.hover.printenv,
-  --   null_ls.builtins.formatting.clang_format,
-  --   null_ls.builtins.diagnostics.eslint,
-  --   null_ls.builtins.completion.spell,
-  --   null_ls.builtins.code_actions.gitsigns,
-  -- },
-
   sources = {
     null_ls.builtins.formatting.clang_format.with {
       extra_args = {
@@ -18,7 +9,7 @@ local opts = {
       },
     },
 
-    -- null_ls.builtins.formatting.clang_format,
+    null_ls.builtins.formatting.clang_format,
     null_ls.builtins.diagnostics.cppcheck,
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.gofmt,
