@@ -35,11 +35,13 @@ plugins = {
       },
     },
   },
-  {
-    "kristijanhusak/vim-dadbod-ui",
-    lazy = false,
-  },
   -- {
+  --   -- Database stuff (might be useful)
+  --   "kristijanhusak/vim-dadbod-ui",
+  --   lazy = false,
+  -- },
+  -- {
+  -- -- Database completion utils
   --   "kristijanhusak/vim-dadbod-completion",
   --   lazy = false,
   --   config = function()
