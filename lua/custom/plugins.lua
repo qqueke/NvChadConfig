@@ -85,6 +85,7 @@ plugins = {
   --   lazy = false,
   -- },
   {
+    -- Git preview hunk
     "lewis6991/gitsigns.nvim",
 
     config = function()
@@ -99,6 +100,7 @@ plugins = {
   --   lazy = false,
   -- },
   {
+    -- Code actions in telescope UI
     "nvim-telescope/telescope-ui-select.nvim",
     dependencies = {
       "nvim-telescope/telescope.nvim",
@@ -115,59 +117,65 @@ plugins = {
     end,
   },
   {
+    -- Move between vim and tmux panes with ctrl-<dir>
     "christoomey/vim-tmux-navigator",
     lazy = false,
     config = function(_, _)
       require("core.utils").load_mappings "tmux"
     end,
   },
-  {
-    "rcarriga/nvim-dap-ui",
-    event = "VeryLazy",
-    dependencies = {
-      "mfussenegger/nvim-dap",
-      "leoluz/nvim-dap-go",
-      "nvim-neotest/nvim-nio",
-    },
-    config = function()
-      local dap = require "dap"
-      local dapui = require "dapui"
+  -- {
+  --  -- Debugging UI for DAP
+  --   "rcarriga/nvim-dap-ui",
+  --   event = "VeryLazy",
+  --   dependencies = {
+  --     "mfussenegger/nvim-dap",
+  --     "leoluz/nvim-dap-go",
+  --     "nvim-neotest/nvim-nio",
+  --   },
+  --   config = function()
+  --     local dap = require "dap"
+  --     local dapui = require "dapui"
+  --
+  --     dapui.setup()
+  --     require("dap-go").setup()
+  --
+  --     dap.listeners.before.attach.dapui_config = function()
+  --       dapui.open()
+  --     end
+  --     dap.listeners.before.launch.dapui_config = function()
+  --       dapui.open()
+  --     end
+  --     dap.listeners.before.event_terminated.dapui_config = function()
+  --       dapui.close()
+  --     end
+  --     dap.listeners.before.event_exited.dapui_config = function()
+  --       dapui.close()
+  --     end
+  --
+  --     vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
+  --     vim.keymap.set("n", "<leader>dc", dap.continue, {})
+  --   end,
+  -- },
 
-      dapui.setup()
-      require("dap-go").setup()
-
-      dap.listeners.before.attach.dapui_config = function()
-        dapui.open()
-      end
-      dap.listeners.before.launch.dapui_config = function()
-        dapui.open()
-      end
-      dap.listeners.before.event_terminated.dapui_config = function()
-        dapui.close()
-      end
-      dap.listeners.before.event_exited.dapui_config = function()
-        dapui.close()
-      end
-
-      vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
-      vim.keymap.set("n", "<leader>dc", dap.continue, {})
-    end,
-  },
+  -- {
+  --   -- Debugging adapter
+  --   "jay-babu/mason-nvim-dap.nvim",
+  --   event = "VeryLazy",
+  --   dependencies = {
+  --     "williamboman/mason.nvim",
+  --     "mfussenegger/nvim-dap",
+  --   },
+  --   opts = {
+  --     handlers = {},
+  --   },
+  -- },
+  -- {
+  --   --   -- Debugging adapter
+  --   "mfussenegger/nvim-dap",
+  -- },
   {
-    "jay-babu/mason-nvim-dap.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "mfussenegger/nvim-dap",
-    },
-    opts = {
-      handlers = {},
-    },
-  },
-  {
-    "mfussenegger/nvim-dap",
-  },
-  {
+    -- None ls lsp
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     opts = function()
@@ -190,6 +198,7 @@ plugins = {
     end,
   },
   {
+    -- Mason
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
@@ -205,15 +214,17 @@ plugins = {
     },
   },
   {
+    -- Screenshot utility
     "ellisonleao/carbon-now.nvim",
     lazy = true,
     cmd = "CarbonNow",
     opts = {},
   },
   {
+    -- Undo trees
     "mbbill/undotree",
     keys = {
-      { "<leader>u", vim.cmd.UndotreeToggle, desc = "Toggle UndoTree" },
+      { "<leader>ut", vim.cmd.UndotreeToggle, desc = "Toggle UndoTree" },
     },
     config = function()
       vim.g.undotree_SetFocusWhenToggle = 1 -- Automatically focus on the undotree window
