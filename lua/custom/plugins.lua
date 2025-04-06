@@ -9,6 +9,7 @@ plugins = {
     },
     keys = {
       { "<leader>dm", "<cmd>Noice dismiss<CR>", desc = "Dismiss notifications" },
+      { "<leader>sm", "<cmd>Noice telescope<CR>", desc = "Dismiss notifications" },
     },
     opts = {
       lsp = {
