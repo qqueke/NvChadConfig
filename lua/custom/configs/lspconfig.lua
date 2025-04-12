@@ -64,6 +64,10 @@ lspconfig.gopls.setup {
   },
 }
 
+-- lspconfig.dockercompose_language_server.setup {}
+
+lspconfig.dockerls.setup {}
+
 lspconfig.ts_ls.setup {}
 
 lspconfig.sqlls.setup {}
