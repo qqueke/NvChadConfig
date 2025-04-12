@@ -35,19 +35,6 @@ plugins = {
       },
     },
   },
-  -- {
-  --   -- Database stuff (might be useful)
-  --   "kristijanhusak/vim-dadbod-ui",
-  --   lazy = false,
-  -- },
-  -- {
-  -- -- Database completion utils
-  --   "kristijanhusak/vim-dadbod-completion",
-  --   lazy = false,
-  --   config = function()
-  --     require "custom.configs.dadbod"
-  --   end,
-  -- },
   {
     "crnvl96/lazydocker.nvim",
     event = "VeryLazy",
@@ -126,56 +113,6 @@ plugins = {
       require("core.utils").load_mappings "tmux"
     end,
   },
-  -- {
-  --  -- Debugging UI for DAP
-  --   "rcarriga/nvim-dap-ui",
-  --   event = "VeryLazy",
-  --   dependencies = {
-  --     "mfussenegger/nvim-dap",
-  --     "leoluz/nvim-dap-go",
-  --     "nvim-neotest/nvim-nio",
-  --   },
-  --   config = function()
-  --     local dap = require "dap"
-  --     local dapui = require "dapui"
-  --
-  --     dapui.setup()
-  --     require("dap-go").setup()
-  --
-  --     dap.listeners.before.attach.dapui_config = function()
-  --       dapui.open()
-  --     end
-  --     dap.listeners.before.launch.dapui_config = function()
-  --       dapui.open()
-  --     end
-  --     dap.listeners.before.event_terminated.dapui_config = function()
-  --       dapui.close()
-  --     end
-  --     dap.listeners.before.event_exited.dapui_config = function()
-  --       dapui.close()
-  --     end
-  --
-  --     vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
-  --     vim.keymap.set("n", "<leader>dc", dap.continue, {})
-  --   end,
-  -- },
-
-  -- {
-  --   -- Debugging adapter
-  --   "jay-babu/mason-nvim-dap.nvim",
-  --   event = "VeryLazy",
-  --   dependencies = {
-  --     "williamboman/mason.nvim",
-  --     "mfussenegger/nvim-dap",
-  --   },
-  --   opts = {
-  --     handlers = {},
-  --   },
-  -- },
-  -- {
-  --   --   -- Debugging adapter
-  --   "mfussenegger/nvim-dap",
-  -- },
   {
     -- None ls lsp
     "nvimtools/none-ls.nvim",
@@ -204,18 +141,20 @@ plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "yaml-language-server",
-        "dockerfile-language-server",
-        "docker-compose-language-service",
+        "awk-language-server",
         "bash-language-server",
-        "lua-language-server",
-        "typescript-language-server",
         "clangd",
         "clang-format",
         "codelldb",
+        "docker-compose-language-service",
+        "dockerfile-language-server",
         "gopls",
+        "hadolint",
+        "lua-language-server",
         "sqls",
         "tailwindcss-language-server",
+        "typescript-language-server",
+        "yaml-language-server",
       },
     },
   },
