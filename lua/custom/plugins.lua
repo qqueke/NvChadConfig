@@ -204,6 +204,10 @@ plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "yaml-language-server",
+        "dockerfile-language-server",
+        "docker-compose-language-service",
+        "bash-language-server",
         "lua-language-server",
         "typescript-language-server",
         "clangd",

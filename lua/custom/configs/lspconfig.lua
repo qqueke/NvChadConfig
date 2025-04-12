@@ -16,10 +16,6 @@ vim.diagnostic.config {
 }
 
 lspconfig.clangd.setup {
-  --  on_attach = function(client, bufnr)
-  --    client.server_capabilities.signatureHelpProvider = false
-  --    on_attach(client, bufnr)
-  --  end,
   capabilities = capabilities,
   cmd = {
     "clangd",
@@ -63,8 +59,10 @@ lspconfig.gopls.setup {
     },
   },
 }
+-- Not sure about this one
+lspconfig.docker_compose_ls.setup {}
 
--- lspconfig.dockercompose_language_server.setup {}
+lspconfig.yamlls.setup {}
 
 lspconfig.dockerls.setup {}
 
@@ -80,7 +78,6 @@ cmp.setup.cmdline("/", {
   },
 })
 
--- `:` cmdline setup.
 cmp.setup.cmdline(":", {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
