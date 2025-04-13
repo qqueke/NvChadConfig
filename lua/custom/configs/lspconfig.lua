@@ -60,7 +60,7 @@ lspconfig.gopls.setup {
   },
 }
 -- Not sure about this one
-lspconfig.docker_compose_ls.setup {}
+-- lspconfig.docker_compose_ls.setup {}
 
 lspconfig.yamlls.setup {}
 

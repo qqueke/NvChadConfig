@@ -8,6 +8,7 @@ M.tmux = {
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
     ["n"] = { "nzz", "Center search result" },
     ["N"] = { "Nzz", "Center search result" },
+    ["<C-a>"] = { "ggVG", "select all" },
     -- ["j"] = { "jzz", "Move down and center" },
     -- ["k"] = { "kzz", "Move up and center" },
     ["<Enter>"] = { "o<ESC>", "Center search result" },
