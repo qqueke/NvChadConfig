@@ -19,22 +19,26 @@ lspconfig.clangd.setup {
   capabilities = capabilities,
   cmd = {
     "clangd",
-    "--background-index",
+    -- Performance
     "-j=16",
+    "--background-index",
+    "--pch-storage=memory",
+    "--function-arg-placeholders=false",
+
     "--compile-commands-dir=" .. vim.fn.expand(vim.fn.getcwd()),
     "--query-driver=**",
+    -- "--query-driver=/usr/bin/clang++,/usr/bin/g++",
     "--clang-tidy",
     "--clang-tidy-checks=*",
+    -- "--clang-tidy-checks=performance-*,bugprone-*",
     "--all-scopes-completion",
     "--cross-file-rename",
-    "--function-arg-placeholders=false",
     "--fallback-style=Google",
     "--completion-style=detailed",
-    "--header-insertion-decorators",
-    "--header-insertion=never",
     "--suggest-missing-includes",
+    "--header-insertion=never",
+    -- "--header-insertion-decorators",
     -- "--header-insertion=iwyu",
-    "--pch-storage=memory",
   },
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
