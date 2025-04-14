@@ -23,6 +23,10 @@ local opts = {
 
   on_attach = function(client, bufnr)
     if client:supports_method "textDocument/formatting" then
+      -- Test this
+      -- if client.name ~= "null-ls" then
+      --   client.server_capabilities.documentFormattingProvider = false
+      -- end
       vim.api.nvim_clear_autocmds {
         group = augroup,
         buffer = bufnr,
