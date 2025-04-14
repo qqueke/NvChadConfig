@@ -24,7 +24,6 @@ lspconfig.clangd.setup {
     "--background-index",
     "--pch-storage=memory",
     "--function-arg-placeholders=false",
-
     "--compile-commands-dir=" .. vim.fn.expand(vim.fn.getcwd()),
     "--query-driver=**",
     -- "--query-driver=/usr/bin/clang++,/usr/bin/g++",
@@ -36,8 +35,8 @@ lspconfig.clangd.setup {
     "--fallback-style=Google",
     "--completion-style=detailed",
     "--suggest-missing-includes",
-    "--header-insertion=never",
     -- "--header-insertion-decorators",
+    "--header-insertion=never",
     -- "--header-insertion=iwyu",
   },
   on_attach = function(client, bufnr)
