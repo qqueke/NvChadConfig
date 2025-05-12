@@ -1,9 +1,5 @@
 plugins = {
   {
-    "xiyaowong/transparent.nvim",
-    -- event = "VeryLazy",
-  },
-  {
     "folke/noice.nvim",
     event = "VeryLazy",
     -- opts = {},
