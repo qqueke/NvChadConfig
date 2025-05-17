@@ -53,6 +53,7 @@ lspconfig.clangd.setup {
 }
 
 lspconfig.lua_ls.setup {}
+lspconfig.pylsp.setup {}
 
 lspconfig.gopls.setup {
   settings = {
