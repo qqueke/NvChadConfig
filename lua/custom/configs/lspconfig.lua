@@ -53,7 +53,20 @@ lspconfig.clangd.setup {
 }
 
 lspconfig.lua_ls.setup {}
-lspconfig.pylsp.setup {}
+lspconfig.pylsp.setup {
+
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufnr) -- Call the base on_attach function
+    vim.api.nvim_buf_set_keymap(
+      bufnr,
+      "n",
+      "<Leader>d",
+      "<cmd>lua vim.diagnostic.open_float()<CR>",
+      { noremap = true, silent = true }
+    )
+  end,
+}
 
 lspconfig.gopls.setup {
   settings = {
