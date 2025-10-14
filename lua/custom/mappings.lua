@@ -15,15 +15,21 @@ M.tmux = {
   },
 }
 
--- Uen
--- M.dap = {
---   plugin = true,
---   n = {
---     ["<leader>db"] = {
---       "<cmd> DapToggleBreakpoint <CR>",
---       "Add breakpoint at line",
---     },
---   }
--- }
+M.general = {
+  n = {
+    ["x"] = { '"_x', "Delete without yank" },
+    ["c"] = { '"_c', "Change without yank" },
+    ["D"] = { '"_D', "Delete to end without yank" },
+    ["C"] = { '"_C', "Change to end without yank" },
+  },
+
+  v = {
+    ["<CR>"] = { "<Esc>", "Exit visual mode" },
+    ["~"] = { "<Esc>", "Exit visual mode" },
+    ["x"] = { '"_x', "Delete without yank" },
+    ["c"] = { '"_c', "Change without yank" },
+    ["p"] = { "P", "Paste without overwriting clipboard" },
+  },
+}
 
 return M
